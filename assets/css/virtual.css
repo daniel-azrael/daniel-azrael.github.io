@@ -820,7 +820,7 @@ a:hover, a:active {
     width: 100%;height: 50px;
     line-height: 50px;
     text-align: center;
-    background: #fff;
+    background: #ffffff00;
 }
 
 .owl-dots .owl-dot {
@@ -834,11 +834,11 @@ a:hover, a:active {
     display: block;
     width: 10px;height: 10px;
     border-radius: 50%;
-    background: #dadada;
+    background: #dadada00;
 }
 
 .owl-dots .owl-dot.active span {
-    background: #3c94f8;
+    background: #3c94f800;
 }
 
 /* OpenGraph Grid */
