@@ -494,6 +494,20 @@
   z-index: 9;
 }
 
+.vg-footer .img-place:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.vg-footer .img-place img {
+  filter: grayscale(100%) brightness(2);
+}
+
+.vg-footer .img-place:hover img {
+  filter: none;
+}
+
 /* Theme color style */
 /* Theme Red */
 .theme-red .badge-subhead {
