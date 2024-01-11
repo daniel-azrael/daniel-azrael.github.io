@@ -76,6 +76,7 @@
       </div>
     </div> 
     <!-- End Navbar -->
+
     <!-- Caption header -->
     <div class="caption-header text-center wow zoomInDown">
       <h5 class="fw-normal">Welcome</h5>
@@ -83,10 +84,12 @@
       <div class="fw-light mb-4"> PhD Researcher | <b class="fg-theme">CEMFI</b> </div>
     </div> 
     <!-- End Caption header -->
+
     <div class="floating-button"><span class="ti-mouse"></span></div>
   </div>
   
-    <div class="vg-page page-about" id="about">
+  <!-- About Me -->
+  <div class="vg-page page-about" id="about">
     <div class="container py-5">
       <div class="row">
         <div class="col-lg-4 py-3">
@@ -121,14 +124,14 @@
               <div class="title">2022</div>
               <div class="details">
                 <h5>MSc in Economics and Finance</h5>
-                <small class="fg-theme">CEMFI (Madrid, SPAIN)</small>
+                <small><a class="fg-theme" href="https://www.cemfi.es/">CEMFI</a> <b class="fw-light" style="color: #000000">| Madrid, SPAIN</b> </small>
               </div>
             </li>
             <li>
               <div class="title">2019</div>
               <div class="details">
                 <h5>MA in Economics</h5>
-                <small class="fg-theme">Universidad Nacional de La Plata (La Plata, Argentina)</small>
+                <small><a class="fg-theme" href="https://www.me.econo.unlp.edu.ar/">UNLP</a> <b class="fw-light" style="color: #000000">| La Plata, ARGENTINA</b> </small>
               </div>
             </li>
           </ul>
@@ -138,15 +141,15 @@
             <li>
               <div class="title">2016</div>
               <div class="details">
-                <h5>BSc in Political Science</h5>
-                <small class="fg-theme">Universidad Nacional de Cuyo (Mendoza, Argentina)</small>
+                <h5>BSc in Political Science and Public Administration</h5>
+                <small><a class="fg-theme" href="https://fcp.uncuyo.edu.ar/">UNCuyo</a> <b class="fw-light" style="color: #000000">| Mendoza, ARGENTINA</b> </small>
               </div>
             </li>
             <li>
               <div class="title">2010</div>
               <div class="details">
                 <h5>BSc in Economics</h5>
-                <small class="fg-theme">Universidad Nacional de Cuyo (Mendoza, Argentina)</small>
+                <small><a class="fg-theme" href="https://fce.uncuyo.edu.ar/">UNCuyo</a> <b class="fw-light" style="color: #000000">| Mendoza, ARGENTINA</b> </small>
               </div>
             </li>
           </ul>
@@ -214,85 +217,91 @@
   </div>
    
   <div class="vg-page page-funfact" style="background-image: url(assets/img/bg_banner.jpg);">
-    <div class="caption-header text-center wow zoomInDown">
-        <h2 class="fw-normal">This is just a reminder that the exclusion restriction for calendar months does not hold if you believe in the horoscope. Have a nice day.</h2>
+    <div class="container">
+      <div class="col-md-12 col-lg-12 py-4 wow fadeIn">
+          <h2 class="fg-white">This is just a reminder that the exclusion restriction for calendar months does not hold if you believe in the horoscope.</h2>
+      </div>
     </div>
   </div>
   
   <!-- Research page -->
   <div class="vg-page page-portfolio" id="research">
-    <div class="container">
-      <div class="text-center wow fadeInUp">
-        <div class="badge badge-subhead">Research</div>
-      </div>
-      
-      <h1 class="text-center fw-normal wow fadeInUp">Publications</h1>
+    <div class="text-center wow fadeInUp">
+      <div class="badge badge-subhead">Research</div>
+    </div>
+    <div class="container pt-5">
       <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
         <button class="btn btn-theme-outline selected" data-filter="*">All</button>
-        <button class="btn btn-theme-outline" data-filter=".pub">Publications</button>
-        <button class="btn btn-theme-outline" data-filter=".wp">Working Papers</button>
-        <button class="btn btn-theme-outline" data-filter=".wip">Work in Progress</button>
-        <button class="btn btn-theme-outline" data-filter=".pp">Policy Papers</button>
+        <button class="btn btn-theme-outline" data-filter=".labor">Labor</button>
+        <button class="btn btn-theme-outline" data-filter=".development">Development</button>
+        <button class="btn btn-theme-outline" data-filter=".inequality">Inequality</button>
+        <button class="btn btn-theme-outline" data-filter=".IO">Industrial Organization</button>
+        <button class="btn btn-theme-outline" data-filter=".corporate">Corporate Governance</button>
+        <button class="btn btn-theme-outline" data-filter=".finance">Finance</button>
       </div>
 
+      <!-- Publications -->
+      <h1 class="text-center fw-normal wow fadeInUp">Publications</h1>
       <div class="gridder my-3">
-        <div class="grid-item apps wow zoomIn">
-          <div class="img-place" data-src="assets/img/work/work-1.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Mobile Travel App</h5> <p>Travel, Discovery</p>">
-            <img src="assets/img/work/work-1.jpg" alt="">
-            <div class="img-caption">
-              <h5 class="fg-theme">Mobile Travel App</h5>
-              <p>Travel, Discovery</p>
+        <div class="grid-item labor development inequality wow zoomIn">
+          <div class="row" style="display: flex; position=relative; justify-content: flex-end">
+            <div style="position:absolute;left:0">
+              <h2 class="fg-theme">Jobs' amenability is not enough</h2>
+              <h5 class="fw-normal"> with <b class="fg-theme"> Lucila Berniell</b></h5>
+              <hr>
+              <a style="color:#000000;font-size:large;" href="https://doi.org/10.1016/j.worlddev.2020.105247" target="_blank"><b>World Development</b> (2021)</a>
+            </div>
+            <div class="img-place" style="margin-right:15px" data-src="assets/img/work/jobAmenities.jpg" data-fancybox data-caption="<h5 class='fg-white'></h5> <p>The recent literature has emphasized the role of occupations in quantifying the amount of telework possible under social distancing measures during the COVID-19 outbreak. However, telework requires not only a teleworkable occupation but also household inputs related to basic infrastructure (internet connection and other housing services) and time availability. We use a recent household survey that includes rich information for large urban areas in 11 Latin American countries and we find that these household inputs are not available for more vulnerable workers. This introduces additional sources of inequality in the possibility of working from home, aside from those imposed by occupations, as well as reinforces the association between economic development and the share of teleworkable jobs. We also analyze the profiles of workers in high personal-proximity jobs, which imply a higher exposure to the virus, and we find important additional sources of inequality. In particular, workers in jobs with higher exposure to the coronavirus also have other health risks, implying that this type of inequality should be carefully taken into account when designing deconfinement measures.</p> <a class='badge badge-subhead' href='https://doi.org/10.1016/j.worlddev.2020.105247' target='_blank'>World Development, Volume 140, April 2021, 105247</a>">
+              <img src="assets/img/work/jobAmenities.jpg" alt="">
             </div>
           </div>
         </div>
-        <div class="grid-item template wireframes wow zoomIn">
-          <div class="img-place" data-src="assets/img/work/work-2.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Music App</h5> <p>Musics</p>">
-            <img src="assets/img/work/work-2.jpg" alt="">
-            <div class="img-caption">
-              <h5 class="fg-theme">Music App</h5>
-              <p>Musics</p>
+      </div> 
+    
+      <!-- Working Papers -->
+      <h1 class="text-center fw-normal wow fadeInUp">Working Papers</h1>
+      <div class="gridder my-3">
+        <div class="grid-item IO corporate finance zoomIn">
+          <div class="row" style="display: flex; position=relative; justify-content: flex-end">
+            <div style="position:absolute;left:0">
+              <h2 class="fg-theme">Reshaping the supply chain network</h2>
+              <hr>
+              <a style="color:#000000;font-size:large;" href="" target="_blank"><b>Latest version</b></a>
+            </div>
+            <div class="img-place" style="margin-right:15px" data-src="assets/img/work/ovrOwn_vertRel.png" data-fancybox data-caption="<h5 class='fg-white'></h5> <p>A growing body of evidence has been showing that the ownership structure of a company affects its objectives, behavior, and business relationships, either by the direct influence of investors or because managers internalize other benefits from pleasing pivotal shareholders.
+              This work studies the relationship between the degree of overlapping ownership and supply chain relationships among companies, finding a moderately strong association between the two. Moreover, I exploit two exogenous sources of variation in the ownership structure, supporting the belief that this entails a causal relationship. Furthermore, I delve deeper into the potential mechanisms behind the results and find evidence suggesting that common shareholders might play an extensive role under double marginalization and holdup. On the contrary, I conduct two empirical exercises that refuse the hypothesis that overlapping owners pursue value-transferring activities.</p> <a class='badge badge-subhead' href='' target='_blank'>Latest version</a>">
+              <img src="assets/img/work/ovrOwn_vertRel.png" alt="">
             </div>
           </div>
         </div>
-        <div class="grid-item apps ios wow zoomIn">
-          <div class="img-place" data-src="assets/img/work/work-3.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Gaming Dashboard</h5> <p>Games, Streaming</p>">
-            <img src="assets/img/work/work-3.jpg" alt="">
-            <div class="img-caption">
-              <h5 class="fg-theme">Gaming Dashboard</h5>
-              <p>Games, Streaming</p>
+      </div>
+
+      <!-- Work in Progress -->
+      <h1 class="text-center fw-normal wow fadeInUp">Working in Progress</h1>
+      <div class="gridder my-3">
+        <div class="grid-item labor inequality wow zoomIn">
+          <div class="row" style="display: flex; position=relative; justify-content: flex-end">
+            <div style="position:absolute;left:0">
+              <h2 class="fg-theme">Job flows and racial inequality</h2>
+              <h5 class="fw-normal"> with <b class="fg-theme">Cauê Dobbin</b> and <b class="fg-theme">Tom Zohar</b></h5>
             </div>
           </div>
         </div>
-        <div class="grid-item graphic ui-ux wow zoomIn">
-          <div class="img-place" data-src="assets/img/work/work-4.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Drugs Delivery App</h5> <p>Health, Drugs</p>">
-            <img src="assets/img/work/work-4.jpg" alt="">
-            <div class="img-caption">
-              <h5 class="fg-theme">Drugs Delivery App</h5>
-              <p>Health, Drugs</p>
+      </div>
+
+      <div class="gridder my-3 py-5">
+        <div class="grid-item IO microeconomics zoomIn">
+          <div class="row" style="display: flex; position=relative; justify-content: flex-end">
+            <div style="position:absolute;left:0">
+              <h2 class="fg-theme">Dare to be different</h2>
             </div>
           </div>
         </div>
-        <div class="grid-item apps ios wow zoomIn">
-          <div class="img-place" data-src="assets/img/work/work-5.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Musics Discover</h5> <p>Musics, Dashboard</p>">
-            <img src="assets/img/work/work-5.jpg" alt="">
-            <div class="img-caption">
-              <h5 class="fg-theme">Musics Discover</h5>
-              <p>Musics, Dashboard</p>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item graphic ui-ux wireframes wow zoomIn">
-          <div class="img-place" data-src="assets/img/work/work-6.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Game Streaming</h5> <p>Games, Streaming</p>">
-            <img src="assets/img/work/work-6.jpg" alt="">
-            <div class="img-caption">
-              <h5 class="fg-theme">Game Streaming</h5>
-              <p>Games, Streaming</p>
-            </div>
-          </div>
-        </div>
-      </div> <!-- End gridder -->
+      </div>
+
     </div>
-  </div> <!-- End Research page -->
+  </div> 
+  <!-- End Research page -->
 
   <!-- Teaching page -->
   <div class="container pt-5" id="teaching">
@@ -306,61 +315,28 @@
 
           <li>
             <div class="title">2023</div>
-            <div class="details" style="display: flex; position=relative; justify-content: flex-end">
-              <div class="row">
-                <div class="py-0" style="position:absolute; left:50px">
-                  <div class="float-lg-right"> 
-                    <h5>Microeconomics</h5>
-                    <p style="font-size:xx-small"> MSc in Economics and Finance</p>
-                    <small class="fg-theme">CEMFI <b class="fw-light" style="color: #000000">| Madrid, SPAIN</b></small>
-                  </div>
-                </div>
-                <div class="py-0" style="margin-right:30px">
-                  <a class="img-place wow fadeInUp" href="https://www.cemfi.es/" target="_blank">
-                    <img src="assets/img/logo/cemfi.png" alt="Cemfi" style="max-height: 75px; width:auto";>
-                  </a>
-                </div>
-              </div>
+            <div class="details">
+              <h5>Microeconomics</h5>
+              <p style="font-size:xx-small"> MSc in Economics and Finance</p>
+              <small><a class="fg-theme" href="https://www.cemfi.es/">CEMFI</a> <b class="fw-light" style="color: #000000">| Madrid, SPAIN</b> </small>
             </div>
           </li>
 
           <li>
             <div class="title">2022</div>
-            <div class="details" style="display: flex; position=relative; justify-content: flex-end">
-              <div class="row">
-                <div class="py-0" style="position:absolute; left:50px">
-                  <div class="float-lg-right">  
-                    <h5>Microeconomics</h5>
-                    <p style="font-size:xx-small"> MSc in Economics and Finance </p>
-                    <small class="fg-theme">CEMFI <b class="fw-light" style="color: #000000">| Madrid, SPAIN</b></small>
-                  </div>
-                </div>
-                <div class="py-0" style="margin-right:30px">
-                  <a class="img-place wow fadeInUp" href="https://www.cemfi.es/" target="_blank">
-                    <img src="assets/img/logo/cemfi.png" alt="Cemfi" style="max-height: 75px; width:auto";>
-                  </a>
-                </div>
-              </div>
+            <div class="details">
+              <h5>Microeconomics</h5>
+              <p style="font-size:xx-small"> MSc in Economics and Finance </p>
+              <small><a class="fg-theme" href="https://www.cemfi.es/">CEMFI</a> <b class="fw-light" style="color: #000000">| Madrid, SPAIN</b> </small>
             </div>
           </li>
 
           <li>
             <div class="title">2020</div>
-            <div class="details" style="display: flex; position=relative; justify-content: flex-end">
-              <div class="row">
-                <div class="py-0" style="position:absolute; left:50px">
-                  <div class="float-lg-right"> 
-                    <h5>Economics of Information</h5>
-                    <p style="font-size:xx-small"> MA in Economics </p>
-                    <small class="fg-theme">UNLP <b class="fw-light" style="color: #000000">| La Plata, Argentina</b></small>
-                  </div>
-                </div>
-                <div class="py-0" style="margin-right:30px">
-                  <a class="img-place wow fadeInUp" href="https://www.me.econo.unlp.edu.ar/" target="_blank">
-                    <img src="assets/img/logo/unlp.png" alt="UNLP" style="max-height: 75px; width:auto";>
-                  </a>
-                </div>
-              </div>
+            <div class="details">
+              <h5>Economics of Information</h5>
+              <p style="font-size:xx-small"> MA in Economics </p>
+              <small><a class="fg-theme" href="https://www.me.econo.unlp.edu.ar/">UNLP</a> <b class="fw-light" style="color: #000000">| La Plata, ARGENTINA</b> </small>
             </div>
           </li>
 
@@ -372,41 +348,19 @@
           
           <li>
             <div class="title">2013</div>
-            <div class="details" style="display: flex; position=relative; justify-content: flex-end">
-              <div class="row">
-                <div class="py-0" style="position:absolute; left:50px">
-                  <div class="float-lg-right">  
-                    <h5>Political Analysis</h5>
-                    <p style="font-size:xx-small"> Invited Instructor | Game Theory & Econometrics </p>
-                    <small class="fg-theme">UNCuyo <b class="fw-light" style="color: #000000">| Mendoza, Argentina</b></small>
-                  </div>
-                </div>
-                <div class="py-0" style="margin-right:30px">
-                  <a class="img-place wow fadeInUp" href="https://fcp.uncuyo.edu.ar/" target="_blank">
-                    <img src="assets/img/logo/uncuyo.png" alt="UNLP" style="max-height: 75px; width:auto";>
-                  </a>
-                </div>
-              </div>
+            <div class="details">
+              <h5>Political Analysis</h5>
+              <p style="font-size:xx-small"> Invited Instructor | Game Theory & Econometrics </p>
+              <small><a class="fg-theme" href="https://fcp.uncuyo.edu.ar/">UNCuyo</a> <b class="fw-light" style="color: #000000">| Mendoza, ARGENTINA</b> </small>
             </div>
           </li>
 
           <li>
             <div class="title">2011</div>
-            <div class="details" style="display: flex; position=relative; justify-content: flex-end">
-              <div class="row">
-                <div class="py-0" style="position:absolute; left:50px">
-                  <div class="float-lg-right"> 
-                    <h5>Introduction to Political Science</h5>
-                    <p style="font-size:xx-small"> Bsc in Political Science </p>
-                    <small class="fg-theme">UNCuyo <b class="fw-light" style="color: #000000">| Mendoza, Argentina</b></small>
-                  </div>
-                </div>
-                <div class="py-0" style="margin-right:30px">
-                  <a class="img-place wow fadeInUp" href="https://fcp.uncuyo.edu.ar/" target="_blank">
-                    <img src="assets/img/logo/uncuyo.png" alt="UNLP" style="max-height: 75px; width:auto";>
-                  </a>
-                </div>
-              </div>
+            <div class="details">
+              <h5>Introduction to Political Science</h5>
+              <p style="font-size:xx-small"> Bsc in Political Science and Public Administration</p>
+              <small><a class="fg-theme" href="https://fcp.uncuyo.edu.ar/">UNCuyo</a> <b class="fw-light" style="color: #000000">| Mendoza, ARGENTINA</b> </small>
             </div>
           </li>
           

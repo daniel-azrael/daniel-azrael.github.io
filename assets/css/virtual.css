@@ -1102,14 +1102,14 @@ a:hover, a:active {
 @media (min-width: 768px) {
     .gridder .grid-item,
     .gridder .grid-sizer {
-        width: 50%;
+        width: 100%;
     }
 }
 
 @media (min-width: 992px) {
     .gridder .grid-item,
     .gridder .grid-sizer {
-        width: 33.33333%;
+        width: 100%;
     }
 }
 
