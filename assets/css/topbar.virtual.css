@@ -298,11 +298,22 @@
 }
 
 .testi-carousel .item .img-place {
-  max-width: 350px;
-  height: 300px;
-  background-color: #f4f5f8;
-  border-radius: 4px;
-  overflow: hidden;
+  max-width: 30px;
+  height: 30px;
+}
+
+.testi-carousel .item .img-place:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.testi-carousel .item .img-place img {
+  filter: grayscale(100%) brightness(2);
+}
+
+.testi-carousel .item .img-place:hover img {
+  filter: none;
 }
 
 .testi-carousel .item .caption {
