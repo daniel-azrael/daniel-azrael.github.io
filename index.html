@@ -44,6 +44,32 @@
   <link rel="stylesheet" type="text/css" href="assets/css/virtual.css">
   
   <link rel="stylesheet" type="text/css" href="assets/css/topbar.virtual.css">
+
+  <!-- Photo and hero fixes, 21 Oct 2026 -->
+  <style>
+    /* The About photo is a square image with the portrait baked in as a circle. The
+       template's red ring is sized to the .img-place box, and Bootstrap stretches that
+       box to the height of the text column, so the ring turned into an ellipse on short
+       or narrow windows. Sizing the box to the image keeps the ring a true circle at
+       every resolution, sitting exactly on the edge of the photo's circle. */
+    .page-about .img-place {
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
+    .page-about .img-place::before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+    }
+
+    /* Matches the size of the "Welcome" line above it. */
+    .hero-degree {
+      font-size: 1.25rem;
+    }
+  </style>
 </head>
 <body class="theme-red">
   
@@ -92,7 +118,7 @@
     <div class="caption-header text-center wow zoomInDown">
       <h5 class="fw-normal">Welcome</h5>
       <h1 class="fw-light mb-4">I'm <b class="fg-theme">Daniel</b> Fernandez</h1>
-      <div class="fw-light mb-4"> PhD in Economics and Government | <b class="fg-theme">CEMFI</b> (2026) </div>
+      <div class="fw-light mb-4 hero-degree"> PhD in Economics and Government | <b class="fg-theme">CEMFI</b> (2026) </div>
     </div> 
     <!-- End Caption header -->
 
@@ -114,7 +140,8 @@
         <div class="col-lg-6 offset-lg-1 wow fadeInRight">
           <h1 class="fw-light">Daniel Fernandez</h1>
           <h5 class="fg-theme mb-3">PhD in Economics and Government <a style="color: #000000">(CEMFI, 2026)</a></h5>
-          <p class="text-muted"> My main research interests are <b class="fg-theme">Business Economics</b>, <b class="fg-theme">Applied microeconomics</b>, <b class="fg-theme">Labor Economics</b>, and <b class="fg-theme">Organizational Behavior</b>.</p>
+          <p class="text-muted">I am an <b class="fg-theme">Applied Economist</b> working on firms and their role in shaping labor and financial markets. I study how firm decision-makers interact with employees, business partners, and stakeholders.</p>
+          <p class="text-muted">My main fields of interest are <b class="fg-theme">Labor Economics</b>, <b class="fg-theme">Industrial Organization</b>, and <b class="fg-theme">Development Economics</b>.</p>
           <button class="btn btn-theme-outline" onclick="window.open('assets/CV/CV - English.pdf', '_blank'); return false;">CV</button>
           <a class="btn btn-theme-outline" href="mailto:daniel.fernandez@cemfi.edu.es">Contact Me</a>
         </div>
@@ -132,36 +159,45 @@
     <div class="container pt-3">
       <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
         <button class="btn btn-theme-outline selected" data-filter="*">All</button>
+        <button class="btn btn-theme-outline" data-filter=".firms">Firms</button>
         <button class="btn btn-theme-outline" data-filter=".labor">Labor</button>
         <button class="btn btn-theme-outline" data-filter=".development">Development</button>
-        <button class="btn btn-theme-outline" data-filter=".inequality">Inequality</button>
-        <button class="btn btn-theme-outline" data-filter=".firms">Firms</button>
-        <button class="btn btn-theme-outline" data-filter=".finance">Finance</button>
-        <button class="btn btn-theme-outline" data-filter=".microeconomics">Microeconomics</button>
-        <button class="btn btn-theme-outline" data-filter=".urban">Urban</button>
+        <button class="btn btn-theme-outline" data-filter=".IO">IO</button>
       </div>
 
-       <!-- Job market paper -->
-      <h1 class="text-center fw-normal wow fadeInUp">Job market paper</h1>
+       <!-- Job market papers -->
+      <h1 class="text-center fw-normal wow fadeInUp">Job market papers</h1>
       <div class="gridder my-3">
-        <div class="grid-item firms finance zoomIn">
+        <div class="grid-item firms IO zoomIn">
         <div class="row">
           <div class="col-lg-8" style="position:relative">
             <h2 class="fg-theme">Overlapping ownership in vertical relations: From fostering to tunneling</h2>
             <hr>
             <a style="color:#000000;font-size:large;" href="assets/workingPapers/Overlapping ownership and vertical relations.pdf" target="_blank"><b>Latest version</b> (October 2026)</a>
           </div>
-          <div class="img-place" data-src="assets/img/work/ovrOwn_vertRel.png" data-fancybox data-caption="<h5 class='fg-white'>Overlapping ownership in vertical relations: From fostering to tunneling</h5> <p>The paper examines the association between ownership structures and trading partnerships among US companies. Using a novel identification strategy, I find that increasing ownership-structure similarity by one standard deviation raises the likelihood of trading partnerships—among feasible customer-supplier dyads—by roughly 10% to 19%. My findings also uncover adverse effects, as overlapping owners may privately benefit from vertical relations to the detriment of non-overlapping shareholders. Overall, baseline effects roughly quadruple when managers have incentives to transfer equity value out of the company with more diluted ownership structures.</p> <a class='badge badge-subhead' href='assets/workingPapers/Overlapping ownership and vertical relations.pdf' target='_blank'>Latest version (October 2026)</a>">
+          <div class="img-place" data-src="assets/img/work/ovrOwn_vertRel.png" data-fancybox data-caption="<h5 class='fg-white'>Overlapping ownership in vertical relations: From fostering to tunneling</h5> <p>The literature identifies several ways in which overlapping shareholders can reduce contractual and informational frictions between potential customers and suppliers. These effects, however, are compatible with overlapping owners also extracting private benefits from minority shareholders. I propose an instrumental variables approach to estimate the effect of more similar ownership structures separately from the effect of more concentrated ownership on either side of the relationship. My findings indicate that overlapping shareholders promote trading partnerships among companies within their portfolios, though the effect becomes four times larger when shareholder concentration differs substantially across companies. I argue that overlapping shareholders can create asymmetric incentives among managers, in which the diluted company prioritizes the partner's gains while the concentrated company ignores potential losses for the other firm. Consistent with this mechanism, the same feature that makes a deal appealing to both parties can make it one-sided, fostering trading partnerships that enable tunneling along the supply chain.</p> <a class='badge badge-subhead' href='assets/workingPapers/Overlapping ownership and vertical relations.pdf' target='_blank'>Latest version (October 2026)</a>">
             <img src="assets/img/work/ovrOwn_vertRel.png" alt="">
           </div>
         </div>
+        </div><div class="grid-item labor development firms zoomIn">
+          <div class="row">
+            <div class="col-lg-8" style="position:relative">
+              <h2 class="fg-theme">The wage-amenities tradeoff: Do firms offset minimum wage increases by cutting job amenities?</h2>
+              <hr>
+              <a style="color:#000000;font-size:large;" href="assets/workingPapers/Wage-amenities trade-off.pdf" target="_blank"><b>Latest version</b> (April 2026)</a>
+            </div>
+            <div class="img-place" data-src="assets/img/work/mwSpillovers.png" data-fancybox data-caption="<h5 class='fg-white'>The wage-amenities tradeoff: Do firms offset minimum wage increases by cutting job amenities?</h5> <p>The paper studies how firms respond to minimum wage increases. While previous studies focus on the employment-wage tradeoff, I develop a framework in which firms choose wages and job amenities, subject to binding wage floors. The model predicts that higher minimum wages compress the wage distribution but increase dispersion in job amenities. Furthermore, when firms must offer the same amenities to all employees, compensating differentials can propagate throughout the wage distribution. I test these predictions using matched employer-employee administrative data from Brazil. I recover firm-level job amenities using worker flows, and trace wage spillovers exploiting cross-state variation in the effective minimum wage. My findings support the model's predictions. Minimum wage increases reduced wage inequality while increasing dispersion in job amenities and wages above the statutory minimum. The approach helps reconcile the economic intuition that firms respond to higher wage floors with recent evidence of limited employment effects.</p> <a class='badge badge-subhead' href='assets/workingPapers/Wage-amenities trade-off.pdf' target='_blank'>Latest version (April 2026)</a>">
+              <img src="assets/img/work/mwSpillovers.png" alt="">
+            </div>
+          </div>
         </div>
+
       </div>
 
       <!-- Publications -->
       <h1 class="text-center fw-normal wow fadeInUp">Publications</h1>
       <div class="gridder my-3">
-        <div class="grid-item labor development inequality zoomIn">
+        <div class="grid-item labor development zoomIn">
           <div class="row">
             <div class="col-lg-8" style="position:relative">
               <h2 class="fg-theme">Jobs' amenability is not enough</h2>
@@ -187,28 +223,16 @@
               <h2 class="fg-theme">Separations revisited: Do layoffs or quits drive lower separation rates in high-quality firms?</h2>
               <h5 class="fw-normal"> with <b class="fg-theme" >Cauê Dobbin</b> and <b class="fg-theme">Tom Zohar</b></h5>
               <hr>
-              <a style="color:#000000;font-size:large;" href="assets/workingPapers/Separations revisited.pdf" target="_blank"><b>Latest version</b> (May 2026)</a>
+              <a style="color:#000000;font-size:large;" href="https://www.nber.org/papers/w35177" target="_blank"><b>NBER Working Paper</b> (May 2026)</a>
             </div>
-            <div class="img-place" data-src="assets/img/work/sepRevisit.png" data-fancybox data-caption="<h5 class='fg-white'>Separations revisited: Do layoffs or quits drive lower separation rates in high-quality firms?</h5> <p>A well-known empirical regularity is that high-productivity firms have lower worker separation rates, but it is unclear whether this pattern reflects quits or layoffs. Using matched employer-employee data from Brazil that distinguish the reason for each separation, we show that the productivity-separation gradient is driven primarily by layoffs rather than quits. We then propose and test a mechanism in which downward wage rigidity prevents firms from adjusting wages in response to adverse shocks, causing those shocks to translate into layoffs. High-productivity firms are less exposed because their larger markdowns provide a buffer between productivity and wages. Consistent with this mechanism, we find that firms with higher markdowns have lower layoff rates, and that markets with stronger wage rigidity exhibit both higher layoff rates and a steeper productivity-layoff gradient. These findings suggest that productivity differences across firms shape not only wages, but also workers' exposure to job loss.</p> <a class='badge badge-subhead' href='assets/workingPapers/Separations revisited.pdf' target='_blank'>Latest version (May 2026)</a>">
+            <div class="img-place" data-src="assets/img/work/sepRevisit.png" data-fancybox data-caption="<h5 class='fg-white'>Separations revisited: Do layoffs or quits drive lower separation rates in high-quality firms?</h5> <p>A well-known empirical regularity is that high-productivity firms have lower worker separation rates, but it is unclear whether this pattern reflects quits or layoffs. Using matched employer-employee data from Brazil that distinguish the reason for each separation, we show that the productivity-separation gradient is driven primarily by layoffs rather than quits. We then propose and test a mechanism in which downward wage rigidity prevents firms from adjusting wages in response to adverse shocks, causing those shocks to translate into layoffs. High-productivity firms are less exposed because their larger markdowns provide a buffer between productivity and wages. Consistent with this mechanism, we find that firms with higher markdowns have lower layoff rates, and that markets with stronger wage rigidity exhibit both higher layoff rates and a steeper productivity-layoff gradient. These findings suggest that productivity differences across firms shape not only wages, but also workers' exposure to job loss.</p> <a class='badge badge-subhead' href='https://www.nber.org/papers/w35177' target='_blank'>NBER Working Paper (May 2026)</a>">
               <img src="assets/img/work/sepRevisit.png" alt="">
             </div>
           </div>
         </div>
 
-        <div class="grid-item labor development firms zoomIn">
-          <div class="row">
-            <div class="col-lg-8" style="position:relative">
-              <h2 class="fg-theme">The wage-amenities tradeoff: Do firms offset minimum wage increases by cutting job amenities?</h2>
-              <hr>
-              <a style="color:#000000;font-size:large;" href="assets/workingPapers/Wage-amenities trade-off.pdf" target="_blank"><b>Latest version</b> (April 2026)</a>
-            </div>
-            <div class="img-place" data-src="assets/img/work/mwSpillovers.png" data-fancybox data-caption="<h5 class='fg-white'>The wage-amenities tradeoff: Do firms offset minimum wage increases by cutting job amenities?</h5> <p>The paper studies how firms respond to minimum wage increases. While previous studies focus on the employment-wage tradeoff, I develop a framework in which firms choose wages and job amenities, subject to binding wage floors. The model predicts that higher minimum wages compress the wage distribution but increase dispersion in job amenities. Furthermore, when firms must offer the same amenities to all employees, compensating differentials can propagate throughout the wage distribution. I test these predictions using matched employer-employee administrative data from Brazil. I recover firm-level job amenities using worker flows, and trace wage spillovers exploiting cross-state variation in the effective minimum wage. My findings support the model's predictions. The approach helps reconcile the economic intuition that firms respond to higher wage floors with recent evidence of limited employment effects.</p> <a class='badge badge-subhead' href='assets/workingPapers/Wage-amenities trade-off.pdf' target='_blank'>Latest version (April 2026)</a>">
-              <img src="assets/img/work/mwSpillovers.png" alt="">
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-item labor microeconomics firms zoomIn">
+        
+        <div class="grid-item labor firms IO zoomIn">
           <div class="row">
             <div class="col-lg-8" style="position:relative">
               <h2 class="fg-theme">Dare to be different: Compensation schemes and strategic competition</h2>
@@ -221,7 +245,7 @@
           </div>
         </div>
 
-        <div class="grid-item labor urban firms zoomIn">
+        <div class="grid-item labor development zoomIn">
           <div class="row">
             <div class="col-lg-8" style="position:relative">
               <h2 class="fg-theme">Spatial distribution of registered economic activity in Buenos Aires</h2>
@@ -273,7 +297,7 @@
           </div>
           <div class="tagline">
             <h2 class="mb-0">Tom Zohar</h2>
-            <h5 class="fw-light mb-0">Assistant Professor of Economics</h5>
+            <h5 class="fw-light mb-0">Associate Professor of Economics</h5>
             <h5 class="fg-white"> <b class=fg-theme-red> CEMFI </b> <b class=fw-light> | Madrid, Spain</b></h5>
             
             <a style="display:inline-block" class="img-place wow fadeInUp" href="https://tomzohar.com/" target="_blank">
@@ -415,7 +439,7 @@
         <div class="py-1" style="margin-right:50px">
           <div class="footer-lg-right">
             <ul class="list-unstyled">
-              <img src="assets/img/photoMate.png" alt="" style="height: 250;">
+              <img src="assets/img/photoMate.png" alt="" style="width: 184px; height: 184px;">
             </ul>
           </div>
         </div>
