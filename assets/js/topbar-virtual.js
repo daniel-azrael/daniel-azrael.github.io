@@ -4,11 +4,39 @@ $(function() {
     percentPosition: true
   });
   
+  // Hide a research section's heading (and its empty grid) when no items match
+  // the active filter, so sections with no matching papers don't leave a stray
+  // headline behind.
+  function updateResearchHeadings(filterValue) {
+    $('.gridder').each(function () {
+      var $gridder = $(this);
+      var $heading = $gridder.prev('h1');
+      var matchCount = 0;
+      $gridder.find('.grid-item').each(function () {
+        if (filterValue === '*' || $(this).is(filterValue)) {
+          matchCount++;
+        }
+      });
+      if (matchCount === 0) {
+        $heading.hide();
+        $gridder.hide();
+      } else {
+        $heading.show();
+        $gridder.show();
+        $gridder.isotope('layout');
+      }
+    });
+  }
+
   // filter items on button click
   $('.filterable-button').on( 'click', 'button', function() {
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({ filter: filterValue });
+    updateResearchHeadings(filterValue);
   });
+
+  // Keep headings in sync with the initial "All" state on load.
+  updateResearchHeadings('*');
   
   $('.testi-carousel').owlCarousel({
     margin: 0,
